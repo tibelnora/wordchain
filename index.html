@@ -4,50 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Word Chain: Voice First — Support</title>
+  <meta name="description" content="Word Chain: Voice First is a fast word chain game you can play by voice, hands-free. Play vs AI, Blitz, 2-Player or the Daily Challenge in 7 dictionary languages." />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0a0a0f; color: #f0f0f0; }
-    header { padding: 60px 24px 40px; text-align: center; }
-    header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; }
-    header p { margin-top: 12px; font-size: 1.1rem; color: #aaa; }
-    header a { color: #aaa; text-decoration: none; font-size: 0.9rem; display: inline-block; margin-top: 16px; }
-    header a:hover { color: #fff; }
-    section { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
-    h2 { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
-    p, li { font-size: 1rem; color: #bbb; line-height: 1.7; }
-    p + p { margin-top: 10px; }
-    a { color: #ccc; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    .divider { border: none; border-top: 1px solid #222; margin: 0 24px; }
-    footer { text-align: center; padding: 40px 24px; color: #555; font-size: 0.85rem; }
-    footer a { color: #555; text-decoration: underline; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background:
+        radial-gradient(circle at 8% 10%, rgba(255,140,40,0.35) 0, transparent 30%),
+        radial-gradient(circle at 92% 90%, rgba(60,140,255,0.35) 0, transparent 32%),
+        linear-gradient(120deg, #9a3412 0%, #5b1f2e 38%, #1e2a6e 62%, #1d4ed8 100%);
+      background-attachment: fixed;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 60px 24px;
+    }
+    .container { max-width: 640px; width: 100%; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .app-icon { width: 110px; height: 110px; border-radius: 25px; margin: 0 auto 20px; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: rgba(255,255,255,0.8); font-size: 16px; }
+    .section { margin-bottom: 40px; }
+    h2 { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.7); text-transform: uppercase; margin-bottom: 16px; }
+    .intro { font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.92); text-align: center; }
+    .tagline { font-size: 20px; font-weight: 800; text-align: center; margin-bottom: 12px; }
+    .badge { text-align: center; margin-top: 20px; }
+    .badge img { height: 48px; }
+    .card { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(6px); border-radius: 16px; padding: 20px 24px; margin-bottom: 10px; }
+    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .card p, .card li { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+    .card ul { padding-left: 20px; }
+    .card li { margin-bottom: 4px; }
+    .card strong { color: #fff; }
+    .note { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; margin-top: 14px; text-align: center; }
+    details.faq summary { cursor: pointer; list-style: none; font-size: 16px; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after { content: "+"; font-size: 22px; line-height: 1; color: rgba(255,255,255,0.75); flex: none; }
+    details.faq[open] summary::after { content: "−"; }
+    details.faq p { margin-top: 10px; }
+    .support-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+    .support-text a { color: #fff; }
+    .privacy-link { color: rgba(255,255,255,0.8); font-size: 14px; text-decoration: none; display: block; text-align: center; margin-top: 48px; }
+    .privacy-link + .privacy-link { margin-top: 12px; }
+    .privacy-link:hover { color: #fff; }
+    footer { text-align: center; margin-top: 24px; color: rgba(255,255,255,0.6); font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.85); }
   </style>
 </head>
 <body>
+  <div class="container">
 
-<header>
-  <h1>Word Chain: Voice First</h1>
-  <p>Support</p>
-</header>
+    <div class="header">
+      <a href="https://apps.apple.com/app/id6760949218"><img class="app-icon" src="icon.png" width="110" height="110" alt="Word Chain: Voice First app icon" /></a>
+      <h1>Word Chain: Voice First</h1>
+      <p class="subtitle">Think fast. Chain words. Beat the clock.</p>
+    </div>
 
-<hr class="divider" />
+    <div class="section">
+      <p class="intro">A fast-paced word chain game where the last letter of each word starts the next one. Simple rules, endless challenge. Play by voice, even hands-free: the app says the letter out loud, and you just say your word.</p>
+      <div class="badge"><a href="https://apps.apple.com/app/id6760949218"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Word Chain on the App Store" /></a></div>
+    </div>
 
-<section>
-  <h2>Support</h2>
-  <p>For support or feedback, email <a href="mailto:tibelnora.spt@gmail.com?subject=Word%20Chain%20Support">tibelnora.spt@gmail.com</a>. Reviews on the App Store are also welcome — we read every one and address feedback in future updates.</p>
-</section>
+    <div class="section">
+      <h2>What it does</h2>
+      <div class="card">
+        <h3>🎤 Play hands-free</h3>
+        <ul>
+          <li>Say your word out loud instead of typing; the app submits it as soon as it recognizes it</li>
+          <li>Eyes-free play: the app announces the required letter, so you can play on a walk, at the gym or while doing chores</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🎮 Game modes</h3>
+        <ul>
+          <li><strong>vs AI:</strong> an adaptive opponent that gets harder as you improve, with Chain Goal, Sudden Death and No Timer options</li>
+          <li><strong>Blitz:</strong> as many words as you can before time runs out, solo or pass-and-play</li>
+          <li><strong>2-Player:</strong> take turns on the same phone and outlast your opponent</li>
+          <li><strong>Daily Challenge:</strong> a new themed category every day, like animals, cities or dinosaurs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌍 Learn a language</h3>
+        <ul>
+          <li>7 dictionary languages: English, Spanish, French, German, Italian, Russian and Swedish</li>
+          <li>A fun way to practice vocabulary and recall in another language (the game's menus stay in English)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🏆 Track your progress</h3>
+        <ul>
+          <li>Stats, streaks and game history</li>
+          <li>Chain Archive: revisit and share the full chain from any of your last 10 games</li>
+          <li>Game Center leaderboards and achievements</li>
+        </ul>
+      </div>
+      <p class="note">Free to download. No subscription: optional one-time upgrades remove ads, unlock all backgrounds, and add SAT and ESL vocabulary modes.</p>
+    </div>
 
-<hr class="divider" />
+    <div class="section">
+      <h2>Frequently Asked Questions</h2>
 
-<section>
-  <h2>Get the App</h2>
-  <p><a href="https://apps.apple.com/app/id6760949218">Word Chain: Voice First on the App Store</a></p>
-</section>
+      <details class="card faq">
+        <summary>How do I play by voice?</summary>
+        <p>Make sure <strong>Voice Input</strong> is on in Settings → Sound &amp; Voice, then tap the mic button and say your word. The app submits it automatically once it recognizes the word. You can always type instead and press ✓ or Return.</p>
+      </details>
 
-<footer>
-  <p>&copy; 2026. All rights reserved. | <a href="/wordchain/privacy.html">Privacy Policy</a> | <a href="/">Our apps</a></p>
-</footer>
+      <details class="card faq">
+        <summary>How do I play without looking at the screen?</summary>
+        <p>In Settings → Sound &amp; Voice, turn on <strong>Voice Input</strong> and <strong>Announce Letter</strong>. The app then speaks the required letter, the game result and milestones out loud, and the mic starts automatically on your turn.</p>
+      </details>
 
+      <details class="card faq">
+        <summary>The app doesn't recognize my word. What can I do?</summary>
+        <p>Speak clearly in a quiet place, and check that the dictionary language in Settings matches the language you're speaking; voice recognition follows the selected language automatically. If a word still isn't recognized, type it instead.</p>
+      </details>
+
+      <details class="card faq">
+        <summary>Why does the app need microphone and speech recognition access?</summary>
+        <p>Only for voice input. It uses Apple's built-in speech recognition, the same technology as iPhone keyboard dictation, so speech is processed by Apple, not by us. If you prefer, turn Voice Input off and type your words.</p>
+      </details>
+
+      <details class="card faq">
+        <summary>How does scoring work?</summary>
+        <p>Every valid word scores at least 1 point. Answering quickly adds up to 3 bonus points, and longer words score more: +1 for 6 or more letters, +2 for 8 or more. Faster and longer words are always better.</p>
+      </details>
+
+      <details class="card faq">
+        <summary>How do I beat the AI?</summary>
+        <p>Open a 50-point lead over the AI. After you win, you can tap <strong>Keep Building</strong> to continue the chain with no score limit until the AI gets stuck.</p>
+      </details>
+
+      <details class="card faq">
+        <summary>How do I restore my purchase?</summary>
+        <p>Open Settings in the app and tap <strong>Restore Purchase</strong>, signed in with the same Apple ID you used to buy it.</p>
+      </details>
+    </div>
+
+    <div class="section">
+      <h2>Support</h2>
+      <p class="support-text">For support or feedback, email <a href="mailto:tibelnora.spt@gmail.com?subject=Word%20Chain%20Support">tibelnora.spt@gmail.com</a>. Reviews on the App Store are also welcome — we read every one and address feedback in future updates.</p>
+    </div>
+
+    <a class="privacy-link" href="/wordchain/privacy.html">Privacy Policy</a>
+    <a class="privacy-link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
+
+    <footer>
+      <p style="margin-top:16px;">© 2026. All rights reserved.</p>
+      <p style="margin-top:8px;"><a href="/">Our apps</a></p>
+    </footer>
+
+  </div>
 </body>
 </html>
